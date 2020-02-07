@@ -175,7 +175,7 @@ class NetSuite:
         return self.wsdl_url_tmpl.format(
             underscored_version=self.underscored_version,
             # https://followingnetsuite.wordpress.com/2018/10/18/suitetalk-sandbox-urls-addendum/
-            account_id=self.config.account.lower().replace('_', '-'),
+            account_id=self.config.account,
         )
 
     def _generate_cache(self) -> zeep.cache.Base:
